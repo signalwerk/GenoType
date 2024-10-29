@@ -1,0 +1,45 @@
+[
+  {
+    "title": "test 2",
+    "summary": "test hello",
+    "platform": "MacOS",
+    "authors": [
+      "sh"
+    ],
+    "platformData": {
+      "id": "MacOS",
+      "title": "Desktop-Application (MacOS)"
+    },
+    "authorsData": [
+      {
+        "firstname": "Stefan",
+        "familyname": "Huber",
+        "id": "sh"
+      }
+    ]
+  },
+  {
+    "title": "Test",
+    "platform": "MacOS",
+    "authors": [
+      "sh",
+      "th"
+    ],
+    "platformData": {
+      "id": "MacOS",
+      "title": "Desktop-Application (MacOS)"
+    },
+    "authorsData": [
+      {
+        "firstname": "Stefan",
+        "familyname": "Huber",
+        "id": "sh"
+      },
+      {
+        "firstname": "test",
+        "familyname": "Huber",
+        "id": "th"
+      }
+    ]
+  }
+]

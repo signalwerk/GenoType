@@ -1,0 +1,40 @@
+{
+  "name": "genotype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && node build/render.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cms": "npx decap-server",
+    "serve": "npx serve",
+    "start": "concurrently -k \"npm run cms\" \"npx serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signalwerk/history-of-digital-typography.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/signalwerk/history-of-digital-typography/issues"
+  },
+  "homepage": "https://github.com/signalwerk/history-of-digital-typography#readme",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "concurrently": "^9.0.1",
+    "decap-server": "^3.1.2",
+    "serve": "^14.2.4",
+    "vite": "^5.4.10",
+    "vite-plugin-static-copy": "^2.0.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0",
+    "path": "^0.12.7",
+    "prettier": "^3.3.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "type": "module"
+}

@@ -1,0 +1,87 @@
+backend:
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+  branch: main
+
+media_folder: /public/assets/media
+
+collections:
+  - name: "tools"
+    label: "Font Generation Tools"
+    folder: "content/tools"
+    format: json
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Summary", name: "summary", widget: "text", required: false }
+      - {
+          label: "Project Start",
+          name: "project_start",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Project Sunset",
+          name: "project_sunset",
+          widget: "string",
+          required: false,
+        }
+      - { label: "URL", name: "url", widget: "string", required: false }
+      - {
+          label: "Images",
+          name: "images",
+          widget: "image",
+          multiple: true,
+          required: false,
+        }
+      - {
+          label: "Authors",
+          name: "authors",
+          widget: "relation",
+          collection: "authors",
+          searchFields: ["firstname", "familyname"],
+          valueField: "id",
+          multiple: true,
+          required: false,
+        }
+      - {
+          label: "Platform",
+          name: "platform",
+          widget: "relation",
+          collection: "platforms",
+          searchFields: ["title"],
+          display_fields: ["title"],
+          valueField: "id",
+          multiple: false,
+          required: false,
+        }
+
+  - name: "authors"
+    label: "Authors"
+    folder: "content/authors"
+    format: json
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "First Name", name: "firstname", widget: "string" }
+      - { label: "Family Name", name: "familyname", widget: "string" }
+      - { label: "Bio", name: "bio", widget: "text", required: false }
+      - { label: "Website", name: "website", widget: "string", required: false }
+
+  - name: "platforms"
+    label: "Platforms"
+    folder: "content/platforms"
+    format: json
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Description",
+          name: "description",
+          widget: "text",
+          required: false,
+        }
